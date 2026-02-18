@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumit Gangwar | Frontend Developer & Data Analyst</title>
+
+  <meta name="description"
+    content="Sumit Gangwar - Frontend Developer and Data Analyst Portfolio. HTML, CSS, JavaScript, SQL, Python, Power BI Projects.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav>
+    <h2>Sumit Gangwar</h2>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button id="themeToggle">🌙</button>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <header class="hero">
+    <img src="image.jpg" alt="Sumit Gangwar Profile Photo" class="profile-img">
+
+    <h1>Hi, I'm Sumit Gangwar</h1>
+    <p id="typing"></p>
+
+    <button onclick="openResume()">Preview Resume</button>
+  </header>
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about">
+    <h2>About Me</h2>
+
+    <p>
+      I am a passionate <strong>Frontend Developer and Data Analyst</strong> with a strong interest in
+      building modern, responsive web applications and transforming raw data into meaningful insights.
+    </p>
+
+    <p>
+      I specialize in HTML, CSS, and JavaScript to create interactive user interfaces,
+      and I work with SQL, Python, Excel, and Power BI to analyze data and build
+      powerful dashboards and visualizations.
+    </p>
+
+    <p>
+      My goal is to combine clean design with data-driven solutions to create
+      impactful digital products that are visually appealing and analytically powerful.
+    </p>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+
+    <h3>Frontend Development</h3>
+
+    <div class="skill">
+      <p>HTML</p>
+      <div class="progress">
+        <div class="progress-bar" data-progress="90%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>CSS</p>
+      <div class="progress">
+        <div class="progress-bar" data-progress="85%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="progress">
+        <div class="progress-bar" data-progress="80%"></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px;">Data Analytics</h3>
+
+    <div class="skill">
+      <p>SQL</p>
+      <div class="progress">
+        <div class="progress-bar" data-progress="75%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>Python (Pandas, Matplotlib)</p>
+      <div class="progress">
+        <div class="progress-bar" data-progress="70%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>Power BI</p>
+      <div class="progress">
+        <div class="progress-bar" data-progress="75%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>Microsoft Excel</p>
+      <div class="progress">
+        <div class="progress-bar" data-progress="85%"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <h3>Personal Portfolio Website</h3>
+      <p>
+        Responsive portfolio website built using HTML, CSS, and JavaScript
+        with animations, dark mode, and contact form integration.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>JavaScript Todo App</h3>
+      <p>
+        Task management application with local storage functionality
+        and dynamic UI updates.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Sales Data Dashboard (Power BI)</h3>
+      <p>
+        Interactive dashboard analyzing sales performance,
+        revenue trends, and KPIs using Power BI.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>SQL Data Analysis Project</h3>
+      <p>
+        Performed data cleaning and analysis using SQL queries
+        to generate actionable business insights.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="statusMessage"></p>
+
+    <div class="social-links">
+      <a href="https://instagram.com/_sumit_gangwar" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a href="https://github.com/SumitGangwar1" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/sumit-gangwar-016259321" target="_blank"
+        rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= RESUME MODAL ================= -->
+
+  <div id="resumeModal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeResume()" style="cursor:pointer;">✖</span>
+      <iframe src="resume.pdf" width="100%" height="500px"></iframe>
+    </div>
+  </div>
+
+  <!-- ================= EMAILJS ================= -->
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    (function () {
+      emailjs.init("YOUR_PUBLIC_KEY");
+    })();
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
